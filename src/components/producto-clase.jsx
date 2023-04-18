@@ -5,7 +5,7 @@ class ProductoClase extends Component {
 
     constructor(props){
         super(props)
-        this.unidadesClase = 0;
+        this.state = { unidadesClase: 0 };
     }
 
     agregarUnidadesClase = () => {
