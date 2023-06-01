@@ -7,15 +7,18 @@ class ProductoClase extends Component {
         super(props)
         this.state = { unidadesClase: 0 };
     }
-
+    
     agregarUnidadesClase = () => {
-
+        const { unidadesTotales, agregarUnidadesTotales } = this.props;
+        agregarUnidadesTotales(unidadesTotales + 1);
+        this.setState({ unidadesClase: this.state.unidadesClase + 1});
+        
     }
 
     render() {
-        <>
-            <div>Cantidad de unidades clase: {}</div>
-            <button>Agregar</button>
+        return <>
+            <div>Cantidad de unidades clase: {this.state.unidadesClase}</div>
+            <button onClick={this.agregarUnidadesClase}>Agregar</button>
         </>
     }
 
